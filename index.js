@@ -24,6 +24,14 @@ menu
         function() { pointers = utils.runScript('src/03-Node_Concepts/buffers.js', pointers, utils.cleanCallback); }
     )
     .addItem(
+        'Node Concepts - Closures Easy Exercise',
+        function() { pointers = utils.runScript('src/03-Node_Concepts/closures/closures.js', pointers, utils.cleanCallback); }
+    )
+    .addItem(
+        'Node Concepts - Closures Complex Exercise',
+        function() { pointers = utils.runScript('src/03-Node_Concepts/closures/closure-factory-consumer.js', pointers, utils.cleanCallback); }
+    )
+    .addItem(
         'Node Concepts - Events Exercise',
         function() { pointers = utils.runScript('src/03-Node_Concepts/events.js', pointers, utils.cleanCallback); }
     )
