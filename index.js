@@ -79,8 +79,11 @@ menu
 
     // 10-Troubleshooting // -------------------------------------------------------------------
     .addItem(
-        'Troubleshooting - REPL Exercise',
-        function() { pointers = utils.runScript('src/10-Troubleshooting/repl.js', pointers, utils.cleanCallback); }
+        'Troubleshooting - REPL Server',
+        function() {
+            pointers = utils.runScript('src/10-Troubleshooting/repl.js', pointers, utils.cleanCallback);
+            utils.opener("http://localhost:1337");
+        }
     )
 
     .customHeader(function() {

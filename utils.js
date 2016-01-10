@@ -3,6 +3,7 @@
 'use strict';
 
 var childProcess = require('child_process');
+var opener = require('opener');
 
 module.exports = {
 
@@ -63,5 +64,10 @@ module.exports = {
         }
 
         console.log('Pres any key to go back to menu');
+    },
+
+    opener: function (url) {
+        url = url || 'http://localhost:12345';
+        opener(url);
     }
 };
