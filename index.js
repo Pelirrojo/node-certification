@@ -11,6 +11,14 @@ menu
     .addDelimiter('-', 40, 'SCND Node Certified Program')
 
     // 01-What_is_Node // ----------------------------------------------------------------------
+    .addItem(
+        'What is Node.js? - Colorful Hello World',
+        function() { pointers = utils.runScript('src/01-What_is_Node/hello-world.js', pointers, utils.cleanCallback); }
+    )
+    .addItem(
+        'What is Node.js? - Hello World Async',
+        function() { pointers = utils.runScript('src/01-What_is_Node/hello-world-async.js', pointers, utils.cleanCallback); }
+    )
 
     // 02-Working_with_npm_and_modules // ------------------------------------------------------
     .addItem(

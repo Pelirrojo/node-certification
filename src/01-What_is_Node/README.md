@@ -18,7 +18,8 @@ There are two additional videos worth watching that introduce the fundamentals o
 
 ## Content
 
-No exercises by the moment sorry :(
+* ./hello-world.js
+* ./hello-world-async.js
 To contrib use [pull requests](https://help.github.com/articles/using-pull-requests).
 
 ## License
