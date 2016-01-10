@@ -20,16 +20,32 @@ menu
 
     // 03-Node_Concepts // ---------------------------------------------------------------------
     .addItem(
+        'Node Concepts - Buffer Exercise',
+        function() { pointers = utils.runScript('src/03-Node_Concepts/buffers.js', pointers, utils.cleanCallback); }
+    )
+    .addItem(
         'Node Concepts - Events Exercise',
         function() { pointers = utils.runScript('src/03-Node_Concepts/events.js', pointers, utils.cleanCallback); }
     )
     .addItem(
-        'Node Concepts - Stream Exercise',
-        function() { pointers = utils.runScript('src/03-Node_Concepts/stream.js', pointers, utils.cleanCallback); }
+        'Node Concepts - Stream Readable Exercise',
+        function() { pointers = utils.runScript('src/03-Node_Concepts/streams/streams-readable.js', pointers, utils.cleanCallback); }
     )
     .addItem(
-        'Node Concepts - Buffer Exercise',
-        function() { pointers = utils.runScript('src/03-Node_Concepts/buffers.js', pointers, utils.cleanCallback); }
+        'Node Concepts - Stream Writable Exercise',
+        function() { pointers = utils.runScript('src/03-Node_Concepts/streams/streams-writable.js', pointers, utils.cleanCallback); }
+    )
+    .addItem(
+        'Node Concepts - Stream Duplex Exercise',
+        function() { pointers = utils.runScript('src/03-Node_Concepts/streams/streams-duplex.js', pointers, utils.cleanCallback); }
+    )
+    .addItem(
+        'Node Concepts - Stream Transform Exercise',
+        function() { pointers = utils.runScript('src/03-Node_Concepts/streams/streams-transform.js', pointers, utils.cleanCallback); }
+    )
+    .addItem(
+        'Node Concepts - Stream Exercise - (Readable + Writable + Transform + Duplex)',
+        function() { pointers = utils.runScript('src/03-Node_Concepts/streams-all.js', pointers, utils.cleanCallback); }
     )
 
     // 04-Working_with_Express // --------------------------------------------------------------

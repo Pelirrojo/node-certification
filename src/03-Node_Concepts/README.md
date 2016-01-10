@@ -18,11 +18,11 @@ The exam will test your knowledge of these core Node concepts:
 
 * ./buffers.js
 * ./events.js
-* ./stream.js 
-  * ./streams/duplex.js 
-  * ./streams/readable.js 
-  * ./streams/transform.js
-  * ./streams/writable.js
+* ./streams-all.js 
+* ./streams/streams-duplex.js 
+* ./streams/streams-readable.js 
+* ./streams/streams-transform.js
+* ./streams/streams-writable.js
 
 ## License
 [Read the LICENSE file (MIT, anyway)](../../LICENSE)

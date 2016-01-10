@@ -1,8 +1,8 @@
 var util = require('util'),
     stream = require('stream'),
-    Writable = stream.Writable,
     fs = require('fs'),
-    MyReadableStream = require('./readable');
+    Writable = stream.Writable,
+    MyReadableStream = require('./streams-readable');
 
 function MyWritableStream (cfg) {
     Writable.call(this, cfg);
@@ -19,7 +19,7 @@ MyWritableStream.prototype._write = function (chunk, encoding, callback) {
 module.exports = MyWritableStream;
 
 if (require.main == module) {
-    var ws = new MyWritableStream({file: 'tasks/data/writeable.text'}),
+    var ws = new MyWritableStream({file: __dirname+'/../../../data/writeable.text'}),
         rs = new MyReadableStream({src: "Reading some data from a long string like this one, a static inline string, 5 byte per time"});
 
     rs.pipe(ws);

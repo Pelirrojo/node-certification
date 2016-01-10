@@ -30,7 +30,7 @@ MyDuplex.prototype._write = function (chunk, encoding, callback) {
 module.exports = MyDuplex;
 
 if (require.main == module) {
-    var ds = new MyDuplex({input: 'this is a message from the future, read bit-per-bit', output: 'tasks/data/writeable.text'});
+    var ds = new MyDuplex({input: 'this is a message from the future, read bit-per-bit', output: __dirname+'/../../../data/writeable.text'});
 
     ds.pipe(ds);
 

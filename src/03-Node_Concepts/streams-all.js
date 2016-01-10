@@ -1,13 +1,13 @@
 var stream = require('stream'),
+    util = require('util'),
+    fs = require('fs'),
     Readable = stream.Readable,
     Writable = stream.Writable,
     Duplex = stream.Duplex,
     Transform = stream.Transform,
-    util = require('util'),
-    fs = require('fs'),
     readableStreamCounter = 0;
 
-function ReadableStream (cfg) {
+function ReadableStream (cfg) {Transform
     Readable.call(this, cfg);
 
     this._data = cfg.data || {};
@@ -61,7 +61,7 @@ function TransformStream (cfg) {
 
 util.inherits(TransformStream, Transform);
 
-fs.readFile('data/readable.text', {encoding: 'utf8'}, function (err, file) {
+fs.readFile(__dirname+'/../../data/readable.text', {encoding: 'utf8'}, function (err, file) {
     if (err) throw err;
 
     var rs = new ReadableStream({
@@ -87,7 +87,7 @@ fs.readFile('data/readable.text', {encoding: 'utf8'}, function (err, file) {
         console.log('');
 
         var ws = new WritebleStream({
-            file: 'data/writeable.text'
+            file: __dirname+'/../../data/writeable.text'
         });
 
         ws.write(readData);
@@ -103,11 +103,11 @@ fs.readFile('data/readable.text', {encoding: 'utf8'}, function (err, file) {
 
 /*,
     ws = new me.WritebleStream({
-        src: 'tasks/data/readable.text',
-        dest: 'tasks/data/writable.text'
+        src: __dirname+'/../../data/readable.text',
+        dest: __dirname+'/../../data/writable.text'
     }),
     ds = new me.DuplexStream(),
     ts = new me.TransformStream({
-        src: 'tasks/data/transform.csv',
-        dest: 'tasks/data/transform.json'
+        src: __dirname+'/../../data/transform.csv',
+        dest: __dirname+'/../../data/transform.json'
     });*/
